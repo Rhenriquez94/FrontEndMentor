@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+:root{
+--Darkcyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+--VerydarkBlue: hsl(212, 21%, 14%);
+--DarkGrayishBlue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+body{
+    background-color:var(--Cream);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.container-box{
+    display: flex;
+    width: 600px;
+    height: 500px;
+    border-radius: 1.5%;
+}
+
+.container-boximg{
+   background-image: url('../images/image-product-desktop.jpg');
+   background-size: cover;
+   background-position: center;   
+   width: 300px;
+   height: 500px;
+   border-radius: 5px 0 0 5px; 
+}
+
+.container-boxtext{
+    background-color: var(--White);
+    width: 300px;
+    height: 500px;
+    border-radius: 0 5px 5px 0;
+}
+
+.container-boxtext2{
+    margin-top: 20px;
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+.container-boxtext__perfume{
+    color: var(--DarkGrayishBlue);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.container-boxtext__name{
+    color: var(--VerydarkBlue);
+    font-weight: bold;
+    font-family: 'Fraunces', sans-serif;
+    padding-right: 50px;
+    margin-bottom: 18px;
+}
+
+.container-boxtext__desc{
+  font-family: 'Montserrat', sans-serif;
+  color: var(--DarkGrayishBlue);
+  font-size: 15px;
+  padding-right: 30px;
+  line-height: 1.5;
+}
+
+.container-boxtext__price{
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 50px;
+}
+
+.container-boxtext__price-new{
+    font-size: 30px;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Fraunces', sans-serif;
+    color: var(--Darkcyan) 
+}
+
+.container-boxtext__price-old{
+    font-size: 15px;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 40px;
+    text-decoration: line-through;
+    color: var(--DarkGrayishBlue);
+}
+
+.boton{
+    background-color: var(--Darkcyan);
+    color: var(--White);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    height:45px ;
+    width: 235px;
+    cursor: pointer;
+    border-radius: 10px;
+    align-items: center;
+}
+.boton:hover{
+    background-color: hsl(158, 36%, 44%);
+}
+
+.boton .carroIcon{
+    background-image: url(../images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    height: 40px;
+    width: 40px;
+    margin-left: 40px;   
+}
+
+.boton .addCart{
+    font-size: 15px;
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+@media screen and (min-width:375px) and (max-width:480px) {
+      
+    .container-box{
+        border-radius: 5px;
+        display: grid;
+        width: 260px;
+        grid-template-columns: repeat(1,260px);
+        grid-template-rows: repeat(1,300px);
+        justify-content: space-around;
+      
+    }
+}

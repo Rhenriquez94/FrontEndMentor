@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Lexend+Deca&display=swap');
+
+/* font-family: 'Big Shoulders Display', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+
+:root{
+
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Very-dark-blue);
+}
+p{
+    color: rgb(202, 198, 198);
+    font-family: 'Lexend Deca', sans-serif; 
+    font-size: 14px; 
+}
+
+h1{
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: white;
+    
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.all-box{
+    display: flex;
+
+}
+
+.box1,.box2,.box3{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 300px;
+}
+
+
+/* Configuracion Box1 */
+.box1{
+    background-color: var( --Bright-orange);
+    border-top-left-radius:10px ;
+    border-bottom-left-radius:10px ;
+}
+
+.box1-contain{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+}
+
+.box1-imgcar,
+.box1-tittle,
+.box1-text,
+.box1-btn{
+    display: flex;
+    align-items: center;
+    height: 125px;
+    width: 250px;
+}
+
+.box1-tittle{
+    display: flex;
+    height: 70px;
+}
+
+.box1-text{
+    height: 160px;
+}
+
+.box1-btn1{
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    background-color:azure;
+    height: 40px;
+    width: 150px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.box1-btn1 p{
+    color: var(--Bright-orange);
+}
+
+.box1-btn1:hover{
+    background-color: var( --Bright-orange);
+    border: 1px solid azure;
+    
+}
+
+.box1-btn1:hover p{
+    background-color: var( --Bright-orange);
+    color: azure;  
+}
+
+
+/* Configuracion Box2 */
+.box2{
+    background-color: var( --Dark-cyan);
+ 
+}
+
+.box2-contain{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+}
+
+.box2-imgcar,
+.box2-tittle,
+.box2-text,
+.box2-btn{
+    display: flex;
+    align-items: center;
+    height: 125px;
+    width: 250px;
+}
+
+.box2-tittle{
+    display: flex;
+    height: 70px;
+}
+
+.box2-text{
+    height: 160px;
+}
+
+.box2-text p{
+    padding-right: 60px;
+}
+
+.box2-btn1{
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    background-color:azure;
+    height: 40px;
+    width: 150px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.box2-btn1 p{
+    color: var(--Dark-cyan);
+}
+
+.box2-btn1:hover{
+    background-color: var( --Dark-cyan);
+    border: 1px solid azure;
+}
+
+.box2-btn1:hover p{
+    color: azure;  
+}
+
+
+/* Configuracion Box3 */
+.box3{
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:10px ;
+}
+
+.box3-contain{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+}
+
+.box3-imgcar,
+.box3-tittle,
+.box3-text,
+.box3-btn{
+    display: flex;
+    align-items: center;
+    height: 125px;
+    width: 250px;
+}
+
+.box3-tittle{
+    display: flex;
+    height: 70px;
+}
+
+.box3-text{
+    height: 160px;
+}
+
+.box3-text p{
+    padding-right: 60px;
+}
+
+.box3-btn1{
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    background-color:azure;
+    height: 40px;
+    width: 150px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.box3-btn1 p{
+    color: var(--Very-dark-cyan);
+}
+
+.box3-btn1:hover{
+    background-color: var(--Very-dark-cyan);
+    border: 1px solid azure;
+}
+
+.box3-btn1:hover p{
+    color: azure;  
+}
+
+@media (max-width: 480px)
+{
+    .all-box{
+        height: 100vh;
+        display: flex;
+       flex-direction: column;
+    }
+
+    .box1{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .box3{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+}
