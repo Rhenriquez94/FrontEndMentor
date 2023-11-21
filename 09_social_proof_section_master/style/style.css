@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+
+:root{
+    /* ### Primary */
+
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+
+    /* ### Neutral */
+
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+
+/* Estilos generales */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'League Spartan', sans-serif;
+    background-color: whitesmoke;
+
+  }
+
+  p{
+    margin: 0px;
+  }
+  
+  /* Estilos usando CSS Grid  CONFIGURACION GENERAL*/
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(2, auto) ;
+    grid-template-columns: 1fr ;
+    max-width: 100%;
+    background-image: url("../images/bg-pattern-bottom-desktop.svg"),
+    url("../images/bg-pattern-top-desktop.svg");
+    background-color: var( --White);
+}
+  
+.top-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+  
+.left-content,
+.right-content {
+    padding: 20px;
+    box-sizing: border-box;
+}
+  
+.bottom-row {
+    grid-column: span 2;
+    height: 330px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.left-content h1{
+    max-width: 280px;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.left-content p{
+    max-width: 400px;
+    color: var(--Dark-Grayish-Magenta);
+}
+
+
+/* Right ::content   */
+
+.right-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+    align-items: center; 
+}
+
+.right-content p{
+   margin: 0;
+   align-self: center;
+   margin-left: 5px;
+}
+
+.stars{
+  display: flex;
+  place-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.stars span {
+  padding-left: 10px;
+}
+
+.color-star{
+    background-color: var(--Light-Grayish-Magenta);
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.column1,
+.column2,
+.column3{
+    width: 350px;
+    height: 45px;
+}
+  
+.column1 {
+    justify-self: start; 
+}
+  
+.column2 {
+    justify-self: center; 
+}
+  
+.column3 {
+    justify-self: end;
+}
+
+
+/* botom */
+
+.contain-card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  height: 300px;
+}
+
+.card{
+  height: 60%;
+  border-radius: 8px;
+}
+
+.card1
+.card2
+.card3{
+  display: grid;
+  height: 200px;
+  width: 320px;
+  background-color:var(--Very-Dark-Magenta);
+}
+
+.card1{
+  align-self: start;
+  background-color:var(--Very-Dark-Magenta);
+}
+
+
+.card2{
+  align-self: center;
+  background-color:var(--Very-Dark-Magenta);
+}
+
+.card3{
+  align-self: end;
+  background-color:var(--Very-Dark-Magenta);
+}
+
+.card-container{
+  margin: 15px;
+  margin-top: 30px;
+  height: 85%;
+  width: 280px;
+}
+
+.card-img-title {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.card-img-title img {
+  max-width: 40px; 
+  height: auto;
+  border-radius: 50%; 
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente el texto */
+  width: 100%;
+  padding-left: 30px;
+}
+
+.text-container p:nth-child(1){
+  color: white;
+  font-weight: bold;
+}
+
+.text-container p:nth-child(2){
+  padding-top: 5px;
+  color:var(--Soft-Pink);
+  font-size: 13px;
+}
+
+.text-description{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 75%;
+  width: 98%;
+  color: white;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1px
+}
+
+
+
+@media screen and (max-width: 480px) {
+  /* Modificaciones para resoluciones menores a 480px */
+
+.grid-container {
+    grid-template-rows: auto; /* Restaurar la disposición por defecto de las filas */
+    grid-template-columns: 1fr; /* Restaurar la disposición por defecto de las columnas */
+    padding: 10px; /* Añadir un poco de espacio entre los elementos */
+}
+
+.top-row {
+    grid-template-columns: 1fr; /* Cambiar a una sola columna */
+}
+
+.left-content,
+.right-content {
+    padding: 10px; /* Reducir el espacio entre el contenido */
+}
+
+.right-content{
+    display: grid;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.left-content h1 {
+    max-width: 100%; /* Ajustar el ancho máximo del título */
+    font-size: 30px; /* Reducir el tamaño del título */
+  }
+
+  .left-content p {
+    max-width: 100%; /* Ajustar el ancho máximo del párrafo */
+    font-size: 14px; /* Reducir el tamaño del párrafo */
+}
+
+  .bottom-row {
+    display: grid;
+    justify-content: center;
+    padding: 5px; /* Añadir un poco de espacio entre los elementos */
+}
+
+  /* Ajustes para las tarjetas */
+  .contain-card {
+    display: flex; /* Cambiar a un diseño flexible */
+    flex-direction: column; /* Mostrar las tarjetas una encima de otra */
+    width: 300px;
+    height: 500px;
+    gap:20px; /* Espacio entre las tarjetas */
+}
+
+ .text-description{
+  padding-top: 20px;
+}
+
+  .card-container {
+    margin-top: 30px; /* Añadir un poco de espacio superior */
+    height: auto; /* Restaurar la altura automática */
+    width: 80%; /* Ajustar al ancho completo */
+}
+}
+
+
+
+
+
+
+
+
+
