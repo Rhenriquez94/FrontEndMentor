@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: var(--Violet);
+}
+.container{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    min-height: 1040px;
+    width: 100%;
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.left-content{
+
+    padding: 50px;
+}
+.left-content-tittle{
+    height: 200px;
+}
+h1,p{
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6
+}
+.right-content{
+    display: grid;
+    padding-top: 300px;
+    grid-template-rows: repeat(4,1fr);
+}
+.rrss {
+    display: grid;
+    justify-items: center;
+    grid-auto-flow: column;
+    grid-column: -2/-1;
+    gap: 60px;
+    width: 500px;
+    justify-content: end;
+}
+.rrss i{
+    font-size: 28px;
+    color: #fff;
+}
+.rrss i:hover{
+    color:var(--SoftMagenta);
+    cursor: pointer;
+}
+.right-content h1{
+    width: 50%;
+}
+.right-content p{
+    font-family: 'Open Sans', sans-serif;
+    width: 55%;
+}
+.btn button{
+    color:azure;
+    height: 50px;
+    width: 180px;
+    font-size: 18px;
+    border-radius: 30px;
+    color: var(--SoftMagenta);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    -webkit-box-shadow: 10px 11px 40px -4px rgba(0,0,0,0.67);
+    -moz-box-shadow: 10px 11px 40px -4px rgba(0,0,0,0.67);
+    box-shadow: 10px 11px 40px -4px rgba(0,0,0,0.67);
+    cursor: pointer;
+    border: none;
+}
+.btn button:hover{
+    background:var(--SoftMagenta);
+    color:white;
+}
+button span:hover{
+    color: #fff;
+}
+
+@media (max-width:480px ){
+    .container {
+        grid-template-columns: 1fr; 
+        height: auto;
+        padding: 0px; 
+        background-image: url("../images/bg-mobile.svg");
+      }
+      .left-content-img img{
+        width: 380px;
+        height: 350px;
+      }
+
+      .left-content-tittle{ 
+        height: 150px;
+      }
+      .left-content,
+      .right-content {
+        padding: 20px;
+        text-align: center;
+      }
+    
+      .rrss {
+        grid-column: 1; 
+        justify-content: center; 
+        width: 100%; 
+      }
+      .right-content h1,
+      .right-content p {
+        width: 100%; 
+      }
+      .btn {
+        display: flex;
+        justify-content: center; 
+      }
+      .btn button {
+        width: 100%; 
+        width: 200px;
+      }
+}
