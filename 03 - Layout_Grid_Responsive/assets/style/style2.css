@@ -80,8 +80,8 @@ span{
     justify-content: space-between;
     background-color: #ddd;
     padding: 20px;
-    width: 240px;
-    height: 480px;
+    width: 500px;
+    height: 700px;
     text-align: center;
     align-items: center;
     justify-items: center;
@@ -90,19 +90,19 @@ span{
 }
 
 .box img{
-    width: 240px;
-    height: 240px;
+    width: 380px;
+    height: 300px;
 }
 
 .box h3, p{
     color: white;
-    font-size: 20px;
+    font-size: 36px
 }
 
 .button{
-    height: 50px;
-    width: 200px;
-    font-size: 20px;
+    height: 80px;
+    width: 335px;
+    font-size: 30px;
     background: #ec7b27;
     border-radius: 14px;
     color: #ddd;
@@ -125,7 +125,9 @@ span{
 }
 
 
-@media (min-width: 992px){
+
+@media (min-width: 576px){
+
     .container {
         display: grid;
         grid-template-areas:
@@ -146,7 +148,6 @@ span{
         grid-area: sidebar;
         min-height: 100%;
     }
-
     .main-grid {
         grid-area: main-grid;
         display: grid;
@@ -159,14 +160,14 @@ span{
         display: flex;
         flex-direction: column;
         background-color: #ddd;
-        height: 357px;
-        width: 215px;
+        height: 300px;
+        width: 200px;
         background-color:#0f2d53;
     }
         
     .box img{
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
         
     .box h3, p{
@@ -182,6 +183,6 @@ span{
    
     .footer {
         grid-area: footer;
-    }
+        }
         
     }
