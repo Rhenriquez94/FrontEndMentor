@@ -1,32 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
 html{
     background-color: #0c2342;
     font-family: 'Roboto', sans-serif;
+    
 }
   
 .container {
     display: grid;
     grid-template-areas:
-      "header header"
-      "sidebar main-grid"
-      "footer footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 20% 80%; 
-    height: 100vh;
+      "header"
+      "sidebar"
+      "main-grid"
+      "footer";
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 100%;
+    height: auto;
 }
- 
+
+
 .header {
     display: flex;
     justify-content: center;
     grid-area: header;
     background-color: #061933;
     color: white;
-    padding: 20px;
+    padding: 20px; 
 }
-  
+
+
 .sidebar {
-    background-color:#0f2d53;
     display: flex;
     flex-direction: column;
     grid-area: sidebar;
@@ -34,7 +43,6 @@ html{
     width: 200px;
     text-decoration: none; 
 }
-
 ul, ol {
     list-style: none; 
 }
@@ -56,23 +64,24 @@ span{
     text-decoration: none; 
     color: white;
 }
-  
+
 .main-grid {
-    grid-area: main-grid;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas en main-grid */
-    gap: 20px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
 }
 
-.box{
+.box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #ddd;
     padding: 20px;
+    width: 500px;
+    height: 700px;
     text-align: center;
     align-items: center;
     justify-items: center;
@@ -81,17 +90,19 @@ span{
 }
 
 .box img{
-    width: 250px;
-    height: 250px;
-  }
+    width: 380px;
+    height: 300px;
+}
 
 .box h3, p{
     color: white;
+    font-size: 36px
 }
 
 .button{
-    height: 40px;
-    width: 250px;
+    height: 80px;
+    width: 335px;
+    font-size: 30px;
     background: #ec7b27;
     border-radius: 14px;
     color: #ddd;
@@ -100,55 +111,78 @@ span{
 }
   
 .button:hover{
-    height: 40px;
-    width: 250px;
     background: #1a55a1;
-    border-radius: 14px;
-    border: none; 
     cursor: pointer;
 }
+
 
 .footer {
     grid-area: footer;
     background-color: #061933;
     color: white;
     padding: 20px;
+    margin-top: 30px;
 }
 
 
 
-@media (max-width: 576px) {
-    /* Cambios para pantallas más pequeñas */
+@media (min-width: 992px){
+
     .container {
+        display: grid;
         grid-template-areas:
-          "header"
-          "sidebar"
-          "main-grid"
-          "footer";
-        grid-template-rows: auto auto 1fr auto;
-        grid-template-columns: 1fr;
-        height: auto;
+          "header header"
+          "sidebar main-grid"
+          "footer footer";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 20% 80%; 
+        height: 100vh;
     }
-
+     
+    .header {
+        grid-area: header;
+    }
+      
     .sidebar {
-        width: 100%;
+        background-color:#0f2d53;
+        grid-area: sidebar;
+        min-height: 100%;
     }
-
-    .header,
-    .footer {
-        padding: 10px;
-    }
-
     .main-grid {
+        grid-area: main-grid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        justify-items: center;
+        margin-top: 20px;
+    }    
+    
+    .box{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
+        background-color: #ddd;
+        height: 300px;
+        width: 200px;
+        background-color:#0f2d53;
     }
-
-    .box {
-        width: 80%;
-        margin-bottom: 20px;
+        
+    .box img{
+        width: 180px;
+        height: 180px;
     }
-}
+        
+    .box h3, p{
+        color: white;
+        font-size: 17px;
+    }
+        
+    .button{
+        height: 40px;
+        width: 160px;
+        font-size: 15px;
+    }
+   
+    .footer {
+        grid-area: footer;
+        }
+        
+    }
