@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+
+:root{
+--White: hsl(0, 0%, 100%);
+--Lightpink: hsl(275, 100%, 97%);
+--Grayishpurple: hsl(292, 16%, 49%);
+--Darkpurple: hsl(292, 42%, 14%);
+--Bgc: #f9eeff;
+
+
+}
+
+*{
+ padding: 0px;
+ margin: 0px;   
+ font-family: 'Work Sans', sans-serif;
+}
+
+body{
+    background: var(--Bgc);
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 45px;
+}
+
+.tittle,
+.subtittle,
+.item-header{
+ color: var(--Darkpurple);  
+ font-weight: bold;
+}
+
+.item-content,
+.text{
+    color: var(--Grayishpurple);
+
+}
+
+.item-content {
+    display: none;
+}
+
+
+.upimg{
+    display: flex;
+    background-image: url(../assets/images/background-pattern-desktop.svg);
+    width: 100%;
+    height: 50%;
+}
+
+.box-accordeon{
+    height: 550px;
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.box-accordeon-container{
+    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    position: absolute; /* Para posicionar el elemento dentro del contenedor */
+    top: -130px; /* Ejemplo: posición para que sobresalga hacia arriba */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    border-radius: 14px;
+    padding: 30px;
+}
+
+.box-accordeon-container div{
+    padding: 10px;
+}
+
+
+
+.tittle{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.tittle img{
+    padding-right: 10px;
+}
+
+
+
+
+.item-header{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.item-header:hover{
+    color: var(--Grayishpurple);
+}
+
+.accordeon{
+    display: flex;
+    flex-direction: column;
+}
