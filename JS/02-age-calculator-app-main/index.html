@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="./index.js" defer></script>
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main class="container">
+  <div class="box">
+
+    <div class="box-container">
+
+      <div class="formulario" id = "fechaInput">
+        <form class="form-container">
+
+          <div class="input-group">
+            <label for="day" >Day</label>
+            <input min="1" max="31" type="number" id="day" placeholder="DD">
+            <div id="errorDay" class="error-message"> </div>
+          </div>
+
+          <div class="input-group">
+            <label for="month" type="number">Month</label>
+            <input id="month" placeholder="MM" min="1" max="12" type="number">
+            <div id="errorMonth" class="error-message"> </div>
+          </div>
+
+          <div class="input-group">
+            <label for="year" type="number">Year</label>
+            <input type="text" id="year" placeholder="YYYY">
+            <div id="errorYear" class="error-message"></div>
+          </div>
+
+        </form>
+
+        <div class="line_btn">
+          <hr class="line">
+          <button onclick="calcularEdad()" id="btn-calculo">
+            <img src="./assets/images/icon-arrow.svg" alt="">
+          </button>
+        </div>
+      </div>
+
+
+      <div class="data">
+        <div class="year">
+          <p id="resultadoAnios">--</p>
+          <p>years</p>
+        </div>
+
+        <div class="month">
+          <p id="resultadoMes">--</p>
+          <p>months</p>
+        </div>
+
+        <div class="day">
+          <p id="resultadoDias">--</p>
+          <p>days</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</main>
+
+ 
+</body>
+</html>
+
+
+<!-- 
+Day
+DD
+
+Month
+MM
+
+Year
+YYYY
+
+-- years
+-- months
+-- days -->
